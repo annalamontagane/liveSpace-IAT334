@@ -8,7 +8,7 @@ The site serves as both:
 - Final project submission  
 - Portfolio-ready case study 
 
-The live site can be found at: https://annalamontagne.github.io/liveSpace-IAT334
+The live site can be found at: https://annalamontagane.github.io/liveSpace-IAT334/
 
 ## Website Contents
 

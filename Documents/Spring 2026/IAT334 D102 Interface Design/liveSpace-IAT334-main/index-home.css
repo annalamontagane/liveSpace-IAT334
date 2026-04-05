@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --line: #dde2ea;
     --textHightLight: #5d5d5d;
@@ -7,6 +11,7 @@
     --text: #313131;
     --fontBig: 'DM Sans', sans-serif;
     --fontNormalText: 'Helvetica', sans-serif;
+    --textColorGreen: #096160;
 }
 
 /********************Header Section*****************/
@@ -72,25 +77,97 @@
 
 .textLanding {
     text-align: center;
+    align-items: center;
 }
 
 .textLanding h1 {
     font-size: 3rem;
     font-family: var(--fontBig);
     margin-bottom: 1rem;
+    max-width: 600px;
+    color: var(--textColorGreen);
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .textLanding p {
     font-family: var(--fontNormalText);
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.textLanding img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+/********************Features Section*****************/
+
+.features {
+    padding: 4rem 5%;
+}
+
+.features h2 {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.featureItem.reverse {
+    flex-direction: row-reverse;
+}
+
+.featureItem .text {
+    flex: 1;
+}
+
+.featureItem h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--fontBig);
+    color: var(--textColorGreen);
+}
+
+.featureItem p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    font-family: var(--fontNormalText);
+    color: var(--text);
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* If there are 2 images → split nicely */
+.imageContainer img {
+    flex: 1;
 }
 
 /********************Footer Section*****************/
 
 .containerFooter {
-    position: fixed;
-    width: 100%;
     display: flex;
     justify-content: center;
 }

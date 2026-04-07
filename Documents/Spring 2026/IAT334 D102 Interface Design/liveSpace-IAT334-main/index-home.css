@@ -17,10 +17,6 @@ html {
 
 /********************Header Section*****************/
 
-header {
-    background-color: var(--backgroundColor);
-}
-
 .site-header {
     backdrop-filter: blur(6px);
     position:sticky;

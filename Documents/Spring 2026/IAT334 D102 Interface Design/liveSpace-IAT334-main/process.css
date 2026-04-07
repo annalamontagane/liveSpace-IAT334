@@ -530,7 +530,7 @@ html {
     border-radius: inherit;
 }
 
-/* ********* */
+/* *********User Testing *************************************************************** */
 
 .userTesting {
     max-width: 1100px;
@@ -539,6 +539,10 @@ html {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+}
+
+.userTesting p {
+    color: var(--muted);
 }
 
 .textUserTesting {
@@ -558,7 +562,16 @@ html {
     font-size: 1.05rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
-    color: var(--muted);
+}
+
+.userTesting > .textUserTesting {
+    margin-bottom: 0.6rem;
+}
+
+.userTesting > .goal,
+.userTesting > .Method,
+.userTesting > .taskDesign {
+    margin-top: 0.8rem;
 }
 
 .goal,
@@ -598,31 +611,24 @@ html {
     margin: 0;
     font-size: 1.35rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     grid-column: 1;
     grid-row: 1 / -1;
-}
-
-.goal h2 {
-    color: var(--text);
 }
 
 .findings h2 {
     margin: 0;
     font-size: 1.35rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: left;
+    grid-column: 1;
+    grid-row: 1 / -1;
 }
 
 .findings > p {
     margin: 0;
     text-align: left;
-}
-
-.findings h2 {
-    grid-column: 1;
-    grid-row: 1 / -1;
 }
 
 .goal > p,
@@ -633,41 +639,12 @@ html {
     font-size: 1rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
-    color: var(--text);
     grid-column: 2 / -1;
 }
 
-.goal .taskList {
-    grid-column: span 1;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.55rem;
-    text-align: center;
-    padding: 0.45rem 0.6rem;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: #ffffff;
-}
-
-.goal .taskList:nth-of-type(1) { grid-column: 2; }
-.goal .taskList:nth-of-type(2) { grid-column: 3; }
-.goal .taskList:nth-of-type(3) { grid-column: 4; }
-.goal .taskList:nth-of-type(4) { grid-column: 5; }
-
-.goal .taskList p {
-    margin: 0;
-    grid-column: auto;
-}
-
-.goal .taskList img {
+.taskDesign .taskList img {
     width: 30px;
     height: 30px;
-    flex: 0 0 auto;
     object-fit: contain;
 }
 
@@ -693,34 +670,21 @@ html {
 .taskDesign .taskList:nth-of-type(3) { grid-column: 4; }
 .taskDesign .taskList:nth-of-type(4) { grid-column: 5; }
 
-.taskDesign .taskList img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
-.goal .taskList h2,
 .taskDesign .taskList h2 {
     margin: 0;
     font-size: 1.05rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     grid-column: auto;
     grid-row: auto;
 }
 
-.goal .taskList p,
 .taskDesign .taskList p {
     margin: 0;
     font-size: 0.98rem;
     line-height: 1.45;
     font-family: var(--fontNormalText);
-    color: var(--text);
     grid-column: auto;
-}
-
-.goal p {
-    margin: 0;
 }
 
 .goal p:last-child,
@@ -749,11 +713,16 @@ html {
 .cardFindings:nth-of-type(3) { grid-column: 4; }
 .cardFindings:nth-of-type(4) { grid-column: 5; }
 
+.taskDesign .taskList:nth-of-type(1),
+.cardFindings:nth-of-type(1) {
+    margin-top: 0.45rem;
+}
+
 .cardFindings h3 {
     margin: 0;
     font-size: 1.05rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
 }
 
 .cardFindings p {
@@ -761,10 +730,9 @@ html {
     font-size: 0.98rem;
     line-height: 1.45;
     font-family: var(--fontNormalText);
-    color: var(--text);
 }
 
-/* ********* */
+/* *************************************************************** */
 
 .finalPrototype {
     max-width: 1100px;
@@ -893,11 +861,6 @@ html {
         grid-row: auto;
     }
 
-    .goal .taskList,
-    .goal .taskList:nth-of-type(1),
-    .goal .taskList:nth-of-type(2),
-    .goal .taskList:nth-of-type(3),
-    .goal .taskList:nth-of-type(4),
     .taskDesign .taskList,
     .taskDesign .taskList:nth-of-type(1),
     .taskDesign .taskList:nth-of-type(2),

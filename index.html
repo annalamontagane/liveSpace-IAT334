@@ -1,17 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- //*next time I should make the max width of the feature smaller*// -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>liveSpace - IAT 344</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Live Space</title>
+    <link rel="stylesheet" href="index-home.css">
 </head>
 
 <body>
+    <header class = "site-header">
+        <div class = "containerHeader nav-wrap">
+            <a class="brandName" href="index.html">Live Space</a>
+            <nav aria-label="Main navigation">
+                <ul class = "nav-list">
+                    <li><a class= "active" href="index.html">HOME</a></li>
+                    <li><a href ="process.html">PROCESS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>liveSpace</h1>
-    <p>yayyy, this is our iat 344 project!</p>
+    <main>
+        <section class = "landing">
+            <div class = "textLanding">
+                <h1>Live smarter. Live faster. Live better. </h1>
+                <p>Instantly see what’s available in your building before you even open your door.</p>
+                
+                <div class="landingButtons">
+                    <a href="process.html" class="btn btn-secondary">Process</a>
+                    <a href="#features" class="btn">Explore</a>
+                </div>  
+
+                <img src="images/landing.png" alt="Landing Image">
+            </div>
+        </section>
+
+        <section class = "missionStatement">
+            <h2>Our Mission</h2>
+            <p>At Live Space, we believe that everyone should be able to live in a space that works for them. We are committed to creating innovative solutions that make it easy to manage and enjoy your living environment.</p>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Main Features</h2>
+
+            <div class="featureItem">
+                <div class="text">
+                    <h3>Check availability</h3>
+                    <p>See what’s available in your building in real time, from laundry machines to parking spaces.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/checkAvailability.png" alt="">
+                </div>
+                
+            </div>
+
+            <div class="featureItem reverse">
+                <div class="text">
+                    <h3>Book amenities</h3>
+                    <p>Reserve shared spaces and amenities in advance, so you can plan your day with confidence.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/checkAvailability.png" alt="">
+                </div>
+            </div>
+
+            <div class="featureItem">
+                <div class="text">
+                    <h3>Have your friends joining?</h3>
+                    <p>Invite your friends to join you in your building and enjoy shared experiences.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/checkAvailability.png" alt="">
+                </div>
+            </div>
+
+            <div class="featureItem reverse">
+                <div class="text">
+                    <h3>Move-in and Move-out</h3>
+                    <p>Streamline your move-in and move-out process with our easy-to-use tools and resources.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/checkAvailability.png" alt="">
+                </div>
+            </div>
+
+            <h2>Secondary Features</h2>
+
+            <div class="featureItem">
+                <div class="text">
+                    <h3>Report issues</h3>
+                    <p>Report maintenance issues and other problems in your building.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/checkAvailability.png" alt="">
+                </div>
+            </div>
+
+            <div class="featureItem reverse">
+                <div class="text">
+                    <h3>Get notifications</h3>
+                    <p>Receive updates about important events and announcements.</p>
+                </div>
+                <div class = "imageContainer">
+                    <img src="images/getNotifications.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class = "site-footer">
+        <div class = "containerFooter">
+            <p>&copy; 2026 Live Space. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 

@@ -12,14 +12,20 @@ html {
     --fontBig: 'DM Sans', sans-serif;
     --fontNormalText: 'Helvetica', sans-serif;
     --textColorGreen: #096160;
+    --backgroundColor: #FAFAFA;
 }
 
 /********************Header Section*****************/
 
+header {
+    background-color: var(--backgroundColor);
+}
+
 .site-header {
     backdrop-filter: blur(6px);
     position:sticky;
-    top:0;
+    top:8px;
+    z-index: 1000;
 }
 
 .containerHeader {
@@ -67,6 +73,9 @@ html {
 }
 
 /********************Main Section*****************/
+main {
+    background-color: var(--backgroundColor);
+}
 
 .landing {
     display: flex;
@@ -104,6 +113,68 @@ html {
     margin-top: 2rem;
 }
 
+.landingButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: var(--fontNormalText);
+    font-weight: 700;
+    border: 2px solid var(--textColorGreen);
+    background-color: var(--textColorGreen);
+    color: #ffffff;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--textColorGreen);
+}
+
+.btn-secondary:hover {
+    background-color: var(--textColorGreen);
+    color: #ffffff;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--textHightLight);
+    outline-offset: 2px;
+}
+
+/* ******************************** */
+
+.missionStatement {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #096160;
+}
+.missionStatement h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--fontBig);
+    color: white;
+    margin-bottom: 1rem;
+}
+.missionStatement p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--fontNormalText);
+    color: white;
+}
+
 /********************Features Section*****************/
 
 .features {
@@ -113,6 +184,8 @@ html {
 .features h2 {
     text-align: center;
     margin: 4rem 0 2rem;
+    font-family: var(--fontBig);
+    color: var(--textColorGreen);
 }
 
 .featureItem {
@@ -166,6 +239,10 @@ html {
 }
 
 /********************Footer Section*****************/
+
+footer {
+    background-color: var(--backgroundColor);
+}
 
 .containerFooter {
     display: flex;

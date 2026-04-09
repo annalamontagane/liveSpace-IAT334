@@ -12,7 +12,3 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Ignore anything outside the project folder
-/Desktop/
-/Applications/
-

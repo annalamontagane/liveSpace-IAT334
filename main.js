@@ -68,7 +68,7 @@ function initProcessIntroHandoff() {
 window.addEventListener('DOMContentLoaded', initProcessIntroHandoff);
 
 function initWireframesHorizontalWheel() {
-	const wireframesSection = document.querySelector('.wireframes-Low');
+	const wireframesSection = document.querySelector('.wireframesScroller');
 	const wireframesTrack = document.querySelector('.imageWireframes-Low');
 	const prevButton = document.querySelector('.wireNavPrev');
 	const nextButton = document.querySelector('.wireNavNext');
@@ -145,3 +145,131 @@ function initWireframesHorizontalWheel() {
 }
 
 window.addEventListener('DOMContentLoaded', initWireframesHorizontalWheel);
+
+function initIntroThirdAutoCarousel() {
+	const introThirdTrack = document.querySelector('.introThird .imageIntro');
+	if (!introThirdTrack) return;
+
+	const cards = Array.from(introThirdTrack.querySelectorAll('img'));
+	if (cards.length <= 1) return;
+
+	const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	const AUTO_ADVANCE_MS = 1400;
+	const RESUME_AFTER_CLICK_MS = 2000;
+	const RESUME_AFTER_TOUCH_MS = 1200;
+	const RESUME_AFTER_WHEEL_MS = 1000;
+
+	let activeIndex = 0;
+	let timerId = null;
+	let resumeId = null;
+
+	// 🔁 Scroll to a card
+	function scrollToCard(index, behavior = 'smooth') {
+		const card = cards[index];
+		if (!card) return;
+
+		const trackRect = introThirdTrack.getBoundingClientRect();
+		const cardRect = card.getBoundingClientRect();
+
+		const targetLeft =
+			introThirdTrack.scrollLeft +
+			(cardRect.left - trackRect.left) -
+			(introThirdTrack.clientWidth - cardRect.width) / 2;
+
+		introThirdTrack.scrollTo({
+			left: Math.max(0, targetLeft),
+			behavior
+		});
+
+		updateActiveCard(); // ✅ always update UI
+	}
+
+	// 🎯 Highlight active card
+	function updateActiveCard() {
+		cards.forEach((card, i) => {
+			if (i === activeIndex) {
+				card.style.opacity = '1';
+				card.style.transform = 'scale(1.08)';
+				card.style.zIndex = '2';
+			} else {
+				card.style.opacity = '0.5';
+				card.style.transform = 'scale(0.92)';
+				card.style.zIndex = '1';
+			}
+		});
+	}
+
+	// ▶️ Auto scroll
+	function startAuto() {
+		if (timerId !== null) return;
+
+		timerId = window.setInterval(() => {
+			activeIndex = (activeIndex + 1) % cards.length;
+			scrollToCard(activeIndex);
+		}, AUTO_ADVANCE_MS);
+	}
+
+	// ⏸ Stop auto
+	function stopAuto() {
+		if (timerId !== null) {
+			clearInterval(timerId);
+			timerId = null;
+		}
+	}
+
+	// ⏸ then ▶️ resume
+	function pauseThenResume(delay) {
+		stopAuto();
+		if (reducedMotion) return;
+
+		if (resumeId !== null) {
+			clearTimeout(resumeId);
+		}
+		resumeId = setTimeout(startAuto, delay);
+	}
+
+	// 🖱 Click interaction
+	introThirdTrack.addEventListener('click', (event) => {
+		const clickedCard = event.target.closest('img');
+		if (!clickedCard) return;
+
+		const clickedIndex = cards.indexOf(clickedCard);
+		if (clickedIndex === -1) return;
+
+		stopAuto();
+		activeIndex = clickedIndex;
+
+		scrollToCard(activeIndex, 'smooth');
+		pauseThenResume(RESUME_AFTER_CLICK_MS);
+	});
+
+	// 🖱 Hover pause
+	introThirdTrack.addEventListener('mouseenter', stopAuto);
+	introThirdTrack.addEventListener('mouseleave', () => {
+		if (!reducedMotion) startAuto();
+	});
+
+	// 📱 Touch / wheel
+	introThirdTrack.addEventListener(
+		'touchstart',
+		() => pauseThenResume(RESUME_AFTER_TOUCH_MS),
+		{ passive: true }
+	);
+
+	introThirdTrack.addEventListener(
+		'wheel',
+		() => pauseThenResume(RESUME_AFTER_WHEEL_MS),
+		{ passive: true }
+	);
+
+	// 🚀 Init
+	scrollToCard(activeIndex, 'auto');
+	updateActiveCard();
+
+	if (!reducedMotion) {
+		startAuto();
+	}
+}
+
+window.addEventListener('DOMContentLoaded', initIntroThirdAutoCarousel);

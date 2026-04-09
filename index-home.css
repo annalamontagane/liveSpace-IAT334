@@ -17,11 +17,17 @@ html {
 
 /********************Header Section*****************/
 
+body {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: var(--backgroundColor);
+}
+
 .site-header {
-    backdrop-filter: blur(6px);
     position:sticky;
-    top:8px;
+    top:0px;
     z-index: 1000;
+    background-color: var(--backgroundColor);
 }
 
 .containerHeader {
@@ -32,16 +38,17 @@ html {
 
 .nav-wrap {
     display: flex;
-    padding: 0 2rem;
+    padding: 0 4rem;
+    height: 70px;
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
 }
 
-.brandName {
-    color: var(--text);
-    text-decoration:none;
-    font-family: var(--fontNormalText);
+.brandName img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 
 .nav-list {
@@ -69,9 +76,6 @@ html {
 }
 
 /********************Main Section*****************/
-main {
-    background-color: var(--backgroundColor);
-}
 
 .landing {
     display: flex;

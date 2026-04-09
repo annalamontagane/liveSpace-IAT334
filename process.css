@@ -17,11 +17,17 @@ html {
 
 /********************Header Section*****************/
 
+body {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: var(--backgroundColor);
+}
+
 .site-header {
-    backdrop-filter: blur(6px);
     position:sticky;
-    top:8px;
+    top:0px;
     z-index: 1000;
+    background-color: var(--backgroundColor);
 }
 
 .containerHeader {
@@ -32,16 +38,17 @@ html {
 
 .nav-wrap {
     display: flex;
-    padding: 0 2rem;
+    padding: 0 4rem;
+    height: 70px;
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
 }
 
-.brandName {
-    color: var(--text);
-    text-decoration:none;
-    font-family: var(--fontNormalText);
+.brandName img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 
 .nav-list {
@@ -68,7 +75,10 @@ html {
     color: var(--textHightLight);
 }
 
+    
 /********************Main Section*****************/
+
+/********************Intro Process*****************/
 
 .introProcess {
     position: relative;
@@ -123,18 +133,97 @@ html {
 }
 
 .imageIntro {
-    flex: 0 0 460px;
-    width: 560px;
-    height: 420px;
+    flex: 0 1 520px;
+    width: min(100%, 600px);
+    max-height: 500px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 10%;
+    overflow: hidden;
 }
 
 .imageIntro img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 700px;
     object-fit: contain;
+    display: block;
+}
+
+/* Third intro: keep same outer box size, but make inner cards swipeable/scrollable */
+.introThird .imageIntro {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.2rem;
+    height: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    cursor: grab;
+    border-radius: 0;
+}
+
+.introThird .imageIntro:active {
+    cursor: grabbing;
+}
+
+.introThird .imageIntro img {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 88%;
+    max-height: 88%;
+    box-sizing: border-box;
+    object-fit: contain;
+    padding: 0;
+    scroll-snap-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.introThird .imageIntro img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(9, 97, 96, 0.12);
+}
+
+.introThird .imageIntro::-webkit-scrollbar {
+    display: none;
+}
+
+.introThird .imageIntro::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.introThird .imageIntro {
+    scrollbar-width: none;
+}
+
+.introThird .imageIntro img {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.introThird .imageIntro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+
+.introThird .imageIntro img {
+    width: 260px;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.introThird .imageIntro img:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .highlight {
@@ -147,13 +236,28 @@ html {
     }
 
     .imageIntro {
-        flex-basis: 360px;
-        width: 360px;
+        flex: 0 1 360px;
+        width: min(100%, 360px);
+        max-height: 250px;
+        height: auto;
+    }
+
+    .imageIntro img {
+        max-height: 250px;
+    }
+
+    .introThird .imageIntro img {
+        width: 220px;
+        height: 84%;
+        max-height: 84%;
+    }
+
+    .introThird .imageIntro {
         height: 250px;
     }
 }
 
-/* ********* */
+/********************Who Is This For*****************/
 
 .whoIsThisFor {
     max-width: 1100px;
@@ -165,22 +269,32 @@ html {
     align-items: center;
 }
 
-.textWho {
+.textWho h2{
     flex: 1;
     display: flex;
     align-items: center;      /* vertical center */
     justify-content: center;  /* horizontal center */
     text-align: center;
     font-family: var(--fontBig);
-    color: var(--text);
-    font-size: 1.5rem;
+    color: var(--textColorGreen);
+    font-size: 2.2rem;
+}
+
+.textWho p {
+    margin: 0 auto 0.75rem;
+    max-width: 760px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-family: var(--fontNormalText);
+    color: var(--muted);
+    text-align: center;
 }
 
 .imageWho {
     width: 100%;
     flex: 1;
-    max-height: 350px;
-    aspect-ratio: 4 / 3;
+    max-height: 750px;
+    /* aspect-ratio: 4 / 3; */
     border: 1px solid var(--line);
     border-radius: 18px;
     background: repeating-linear-gradient(
@@ -200,7 +314,7 @@ html {
     object-fit: cover;
 }
 
-/* ********* */
+/********************Goals*****************/
 
 .goals {
     max-width: 1100px;
@@ -220,13 +334,13 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
 }
 
 .textGoals p {
     margin: 0 auto 0.75rem;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -272,7 +386,7 @@ html {
     margin-bottom: 1rem;
 }
 
-/* ********* */
+/********************Research*****************/
 
 .research {
     max-width: 1100px;
@@ -291,14 +405,14 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: center;
 }
 
 .textResearch p {
     margin: 0 auto 0.75rem;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -345,7 +459,7 @@ html {
     color: var(--text);
 }
 
-/* ********* */
+/********************User Journey*****************/
 
 .userJourney {
     max-width: 1100px;
@@ -360,14 +474,14 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: center;
 }
 
 .textUserJourney p {
     margin: 0 auto;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -375,25 +489,33 @@ html {
 }
 
 .imageUserJourney {
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 16px;
+    width: 100%;
+    flex: 1;
+    max-height: 750px;
+    /* aspect-ratio: 4 / 3; */
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #f4f7fa,
+        #f4f7fa 12px,
+        #ebf0f4 12px,
+        #ebf0f4 24px
+    );
     overflow: hidden;
 }
 
 .imageUserJourney img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
-    border-radius: inherit;
+    object-fit: cover;
 }
 
 /* ********* */
 
 .wireframes-Low {
-    max-width: 1180px;
+    max-width: 1880px;
     margin: 0 auto;
     padding: 2rem 2rem 4rem;
     display: flex;
@@ -405,14 +527,14 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: center;
 }
 
 .textWireframes-Low p {
     margin: 0 auto;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -457,7 +579,7 @@ html {
     flex: 0 0 auto;
     width: auto;
     height: auto;
-    max-width: min(90vw, 520px);
+    max-width: min(90vw, 840px);
     object-fit: initial;
     border: 1px solid var(--line);
     border-radius: 16px;
@@ -500,14 +622,14 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: center;
 }
 
 .textStyleGuide p {
     margin: 0 auto;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -515,19 +637,20 @@ html {
 }
 
 .imageStyleGuide {
-    width: fit-content;
+    width: min(100%, 1100px);
     max-width: 100%;
     margin: 0 auto;
-    border-radius: 16px;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
 }
 
 .imageStyleGuide img {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
-    border-radius: inherit;
+    border: 1px solid var(--line);
+    border-radius: 16px;
 }
 
 /* *********User Testing *************************************************************** */
@@ -553,13 +676,13 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
 }
 
 .textUserTesting p {
     margin: 0 auto;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
 }
@@ -643,6 +766,12 @@ html {
 }
 
 .taskDesign .taskList img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.cardFindings img {
     width: 30px;
     height: 30px;
     object-fit: contain;
@@ -747,14 +876,14 @@ html {
     margin: 0 0 0.75rem;
     font-size: 2.2rem;
     font-family: var(--fontBig);
-    color: var(--text);
+    color: var(--textColorGreen);
     text-align: center;
 }
 
 .textFinalPrototype p {
     margin: 0 auto;
     max-width: 760px;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
@@ -779,6 +908,10 @@ html {
 
 
 /********************Footer Section*****************/
+
+footer {
+    background-color: var(--backgroundColor);
+}
 
 .containerFooter {
     display: flex;
@@ -880,6 +1013,10 @@ html {
     .wireNav {
         width: 36px;
         height: 36px;
+    }
+
+    .imageStyleGuide {
+        grid-template-columns: 1fr;
     }
 
     .nav-wrap {

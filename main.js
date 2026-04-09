@@ -182,7 +182,7 @@ function initIntroThirdAutoCarousel() {
 			behavior
 		});
 
-		updateActiveCard(); // ✅ always update UI
+		updateActiveCard();
 	}
 
 	// 🎯 Highlight active card

@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+.Trash/
+
+# IDE files
+.vscode/
+.idea/
+
+# Node/Python/etc. caches
+node_modules/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore anything outside the project folder
+/Desktop/
+/Applications/

@@ -91,7 +91,7 @@ body {
     max-width: 600px;
     font-family: var(--fontBig);
     justify-content: flex-end;
-    color: var(--text)
+    color: var(--muted);
 }
 
 .introFirst,
@@ -277,7 +277,7 @@ body {
     text-align: center;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 .textWho p {
@@ -356,7 +356,6 @@ body {
 .card img {
     width: 100%;
     min-height: 180px;
-    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--line);
@@ -429,7 +428,6 @@ body {
 .cardResearch img {
     width: 100%;
     min-height: 180px;
-    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--line);
@@ -766,14 +764,14 @@ body {
 }
 
 .taskDesign .taskList img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
 .cardFindings img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 

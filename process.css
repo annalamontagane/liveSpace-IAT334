@@ -95,7 +95,6 @@ body {
 }
 
 .introFirst,
-.introSecond,
 .introThird {
     position: sticky;
     top: 0;
@@ -112,21 +111,13 @@ body {
 }
 
 .introFirst .textIntro,
-.introSecond .textIntro,
 .introThird .textIntro {
     flex: 1;
     min-width: 0;
 }
 
-.introSecond {
-    margin-top: -100vh;
-    opacity: 0;
-    transform: translateY(100px);
-    z-index: 2;
-}
-
 .introThird {
-    margin-top: -200vh;
+    margin-top: -100vh;
     opacity: 0;
     transform: translateY(100px);
     z-index: 1;

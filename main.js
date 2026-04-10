@@ -9,10 +9,9 @@ function mapProgress(value, start, end) {
 function initProcessIntroHandoff() {
 	const introProcess = document.querySelector('.introProcess');
 	const introFirst = document.querySelector('.introFirst');
-	const introSecond = document.querySelector('.introSecond');
 	const introThird = document.querySelector('.introThird');
 
-	if (!introProcess || !introFirst || !introSecond || !introThird) {
+	if (!introProcess || !introFirst || !introThird) {
 		return;
 	}
 
@@ -22,34 +21,23 @@ function initProcessIntroHandoff() {
 		const viewportHeight = window.innerHeight;
 		const scrollY = window.scrollY || window.pageYOffset;
 		const sectionTop = introProcess.offsetTop;
-		const sectionHeight = introProcess.offsetHeight;
 
 		const start = sectionTop - viewportHeight * 0.01;
-        const end = sectionTop + viewportHeight * 0.5;
+		const end = sectionTop + viewportHeight * 0.45;
 		const range = Math.max(end - start, 1);
 		const sectionProgress = clamp((scrollY - start) / range, 0, 1);
-        const sectionProgress2 = clamp((scrollY - (start + viewportHeight * 0.75)) / range, 0, 1);
-        const sectionProgress3 = clamp((scrollY - (start + viewportHeight * 1.5)) / range, 0, 1);
 
+		const firstOut = mapProgress(sectionProgress, 0.0, 0.35);
+		const thirdIn = mapProgress(sectionProgress, 0.1, 0.55);
 
-		const firstOut = mapProgress(sectionProgress, 0.0, 0.3);
-        const secondIn = mapProgress(sectionProgress, 0.2, 0.5);
-        const secondOut = mapProgress(sectionProgress, 0.5, 0.7);
-        const thirdIn = mapProgress(sectionProgress, 0.7, 1.0);
-
-		const secondY = 50 * (1 - secondIn);
-        const thirdY = 50 * (1 - thirdIn);
+		const thirdY = 50 * (1 - thirdIn);
 
 		// FIRST
-        introFirst.style.opacity = String(1 - firstOut);
+		introFirst.style.opacity = String(1 - firstOut);
 
-        // SECOND (in then out)
-        introSecond.style.transform = `translateY(${50 * (1 - secondIn)}px)`;
-        introSecond.style.opacity = String(secondIn * (1 - secondOut));
-
-        // THIRD
-        introThird.style.transform = `translateY(${50 * (1 - thirdIn)}px)`;
-        introThird.style.opacity = String(thirdIn);
+		// THIRD
+		introThird.style.transform = `translateY(${thirdY}px)`;
+		introThird.style.opacity = String(thirdIn);
 
 		ticking = false;
 	}
@@ -200,7 +188,6 @@ function initIntroThirdAutoCarousel() {
 		});
 	}
 
-	// ▶️ Auto scroll
 	function startAuto() {
 		if (timerId !== null) return;
 

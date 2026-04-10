@@ -16,6 +16,7 @@
                 <ul class = "nav-list">
                     <li><a href="index.html">HOME</a></li>
                     <li><a class ="active" href ="process.html">PROCESS</a></li>
+                    <li><a href="https://embed.figma.com/proto/cuK8yjff3J9WOh3OY77l8g/334---FINAL-FR---mock-up-testing?page-id=22%3A2221&node-id=225-7179&viewport=-48259%2C-110%2C0.56&scaling=scale-down&content-scaling=fixed&starting-point-node-id=225%3A7179&embed-host=share" target="_blank">PROTOTYPE <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" style="vertical-align:middle; margin-left:2px;"><path d="M1 9L9 1M9 1H3M9 1v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></a></li>
                 </ul>
             </nav>
         </div>
@@ -25,7 +26,7 @@
         <section class = "introProcess">
             <div class = "introFirst">
                 <div class = "textIntro">
-                    <h2>Walk all the way down just to find sauna are already FULL?</h2>
+                    <h2>Walk all the way down just to find gym is BUSY?</h2>
                 </div>
                 <div class ="imageIntro">
                     <img src="assets/Sauna.png" alt="Busy Sauna">
@@ -72,40 +73,46 @@
                 <h2>Design Goals</h2>
                 <p>Based on our research insights, we set the following design goals to guide our solution development.</p>
             </div>
-            <div class = "card">
-                <img src="assets/StayInformed.png" alt="">
-                <h3>Stay Informed</h3>
-                <p>Stay informed about amenity availability changes. </p>
+             <div class = "card">
+                <img src="assets/LiveStatus.jpg" alt="">
+                <h3>Live Status</h3>
+                <p>Residents want to know if a shared amenity is available before leaving their apartment. </p>
                 <p>Feature supporting this goal:</p>
-                <p>- Push notifications</p>
-                <p>- Availability alerts</p>
-                <p>- Booking reminders</p>
+                <ul>
+                    <li>At a glance real-time status updates in the dashboard</li>
+                    <li>Availability indicators specifying level of occupancy</li>
+                    <li>Detail cards letting people view open spots or who has booked</li>
+                </ul>
             </div>
 
             <div class = "card">
                 <img src="assets/AmenityBooking.jpg" alt="">
                 <h3>Amenity Booking</h3>
-                <p>Easily reserve bookable shared space and manage their bookings.</p>
+                <p>Easily reserve bookable shared spaces and manage their own bookings. </p>
                 <p>Feature supporting this goal:</p>
-                <p>- Amenity booking system</p>
-                <p>- Time-slot selection</p>
-                <p>- Reservation confirmation</p>
+                <ul>
+                    <li>Shared amenity spaces now bookable through a system</li>
+                    <li>Ability to select flexible time slots in a calendar view</li>
+                    <li>Ensure reservation confirmations</li>
+                </ul>
             </div>
-
+            
             <div class = "card">
-                <img src="assets/LiveStatus.jpg" alt="">
-                <h3>Live Status</h3>
-                <p>Residents want to know if a shared amenity is available before leaving their apartment.</p>
+                <img src="assets/StayInformed.png" alt="">
+                <h3>Better Connected</h3>
+                <p>Staying informed and able to notify your friends within the building about your future or current activity.</p>
                 <p>Feature supporting this goal:</p>
-                <p>- Real-time status dashboard</p>
-                <p>- Amenity availability indicators (Available/Busy)</p>
-                <p>- Live occupancy numbers</p>
+                <ul>
+                    <li>At a glance real-time status updates in the dashboard</li>
+                    <li>Availability indicators specifying level of occupancy</li>
+                    <li>Detail cards letting people view open spots or who has booked</li>
+                </ul>
             </div>
         </section>
 
         <section class = "whoIsThisFor">
             <div class = "textWho">
-                <h2>We designed this for people like The McClure Family</h2>
+                <h2>We designed for people like The McClure Family</h2>
                 <p>McClure Family is a typical resident of our target demographic, with a focus on convenience and real-time information.</p>
             </div>
             <div class = "imageWho">
@@ -170,71 +177,56 @@ Five participants are asked to complete tasks while using the high-fidelity Figm
 
             <div class = "taskDesign">
                 <h2>Task Design</h2>
-                <p>Tasks are designed to be short (under one hour total) and to reflect everyday situations that residents might encounter while using the app.</p>
-                <p>Participants were asked to complete the following tasks:</p>
+                <p>Tasks are designed to be short (under one hour total) and to reflect everyday situations that residents might encounter while using the app. Participants were asked to complete the following tasks:</p>
 
-                <div class = "taskList">
-                    <img src="assets/checkAmenities.png" alt="Check Availability Icon">
-                    <h2>Check Availability</h2>
-                    <p>See which amenities are available right now, where they’re located, and how busy they are so you can decide if it’s a good time to go.</p>
+                <div class="taskCards">
+                    <div class="taskList">
+                        <h2>Check Availability</h2>
+                        <p>See which amenities are available right now, where they’re located, and how busy they are so you can decide if it’s a good time to go.</p>
+                    </div>
+
+                    <div class="taskList">
+                        <h2>Report Issues</h2>
+                        <p>Report a problem if something is not working.</p>
+                    </div>
+
+                    <div class="taskList">
+                        <h2>Check Booking Details</h2>
+                        <p>Review your booking details as the date gets closer.</p>
+                    </div>
+
+                    <div class="taskList">
+                        <h2>Receive Notifications</h2>
+                        <p>Get notified about important updates and changes to your bookings.</p>
+                    </div>
                 </div>
-
-                <div class = "taskList">
-                    <img src="assets/reportIssue.png" alt="Check Availability Icon">
-                    <h2>Report Issues</h2>
-                    <p>Report a problem if something is not working.</p>
-                </div>
-
-                <div class = "taskList">
-                    <img src="assets/bookingDetails.png" alt="Check Availability Icon">
-                    <h2>Check Booking Details</h2>
-                    <p>Review your booking details as the date gets closer.</p>    
-                </div>
-
-                <div class = "taskList">     
-                    <img src="assets/emailReceiving.png" alt="Check Availability Icon">
-                    <h2>Receive Notifications</h2>
-                    <p>Get notified about important updates and changes to your bookings.</p>
-                </div>   
             </div>
 
             <div class = "findings">
                 <h2>Findings</h2>
                 <p>Overall, participants found the app to be useful and easy to navigate. However, there were some areas for improvement identified through the testing process.</p>
 
-                <div class = "cardFindings">
-                    <img src="assets/interaction.png" alt="Check Availability Icon">
-                    <h3>Interaction</h3>
-                    <p>Participants had trouble finding the booking details after they made a reservation.</p>
-                </div>
+                <div class="findingCards">
+                    <div class="cardFindings">
+                        <h3>Interaction</h3>
+                        <p>Participants had trouble finding the booking details after they made a reservation.</p>
+                    </div>
 
-                <div class = "cardFindings">
-                    <img src="assets/labelling.png" alt="Check Availability Icon">
-                    <h3>Labelling</h3>
-                    <p>Participants were confused about how to report an issue with an amenity.</p> 
-                </div>
+                    <div class="cardFindings">
+                        <h3>Labelling</h3>
+                        <p>Participants were confused about how to report an issue with an amenity.</p>
+                    </div>
 
-                <div class = "cardFindings">
-                    <img src="assets/usability.png" alt="Check Availability Icon">
-                    <h3>Affordance/Usability</h3>
-                    <p>Participants expressed a desire for more detailed information about the amenities, such as photos and user reviews.</p>
-                </div>
+                    <div class="cardFindings">
+                        <h3>Affordance/Usability</h3>
+                        <p>Participants expressed a desire for more detailed information about the amenities, such as photos and user reviews.</p>
+                    </div>
 
-                <div class = "cardFindings">
-                    <img src="assets/navigation.png" alt="Check Availability Icon">
-                    <h3>Navigation Clarity</h3>
-                    <p>Participants suggested adding a feature to allow users to see the availability of amenities in real-time, rather than just showing the schedule.</p>    
+                    <div class="cardFindings">
+                        <h3>Navigation Clarity</h3>
+                        <p>Participants suggested adding a feature to allow users to see the availability of amenities in real-time, rather than just showing the schedule.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section class = "finalPrototype">
-            <div class = "textFinalPrototype">
-                <h2>Final Prototype</h2>
-                <p>Based on the feedback from user testing, we made several improvements to our design and developed a high-fidelity prototype to showcase our final solution.</p>
-            </div>
-            <div class = "imageFinalPrototype">
-                <img src="assets/final prototype.svg" alt="Final Prototype">
             </div>
         </section>
     </main>

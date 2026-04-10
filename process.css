@@ -102,8 +102,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    width: 100%;
+    gap: 5rem;
+    width: 85%;
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 0;
@@ -114,6 +114,7 @@ body {
 .introThird .textIntro {
     flex: 1;
     min-width: 0;
+    max-width: 30rem;
 }
 
 .introThird {
@@ -338,26 +339,27 @@ body {
 .whoIsThisFor {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
 }
 
-.textWho h2{
-    flex: 1;
-    display: flex;
-    align-items: center;      /* vertical center */
-    justify-content: center;  /* horizontal center */
-    text-align: center;
+.textWho {
+    margin-bottom: 2.5rem;
+}
+
+.textWho h2 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
-    font-size: 2.5rem;
+    text-align: center;
 }
 
 .textWho p {
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -395,31 +397,34 @@ body {
 .goals {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 10rem 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .textGoals {
     grid-column: 1 / -1;
     text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 .textGoals h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
+    text-align: center;
 }
 
 .textGoals p {
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
     color: var(--muted);
+    text-align: center;
 }
 
 .card {
@@ -461,12 +466,25 @@ body {
     margin-bottom: 1rem;
 }
 
+.card ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: var(--fontNormalText);
+    color: var(--text);
+}
+
+.card ul li {
+    margin-bottom: 0.4rem;
+}
+
 /********************Research*****************/
 
 .research {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10em 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -474,10 +492,11 @@ body {
 
 .textResearch {
     grid-column: 1 / -1;
+    margin-bottom: 2.5rem;
 }
 
 .textResearch h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
@@ -485,7 +504,7 @@ body {
 }
 
 .textResearch p {
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -519,18 +538,18 @@ body {
 }
 
 .cardResearch h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
 }
 
 .cardResearch p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.55;
+    font-size: 1.1rem;
+    line-height: 1.5;
     font-family: var(--fontNormalText);
     color: var(--text);
+    margin-bottom: 1rem;
 }
 
 /********************User Journey*****************/
@@ -538,14 +557,18 @@ body {
 .userJourney {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+.textUserJourney {
+    margin-bottom: 2.5rem;
+}
+
 .textUserJourney h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
@@ -553,7 +576,7 @@ body {
 }
 
 .textUserJourney p {
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -591,14 +614,18 @@ body {
 .wireframes-Low {
     max-width: 1880px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+.textWireframes-Low {
+    margin-bottom: 2.5rem;
+}
+
 .textWireframes-Low h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
@@ -606,7 +633,7 @@ body {
 }
 
 .textWireframes-Low p {
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -686,14 +713,18 @@ body {
 .styleGuide {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+.textStyleGuide {
+    margin-bottom: 2.5rem;
+}
+
 .textStyleGuide h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
@@ -701,7 +732,7 @@ body {
 }
 
 .textStyleGuide p {
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -732,7 +763,7 @@ body {
 .userTesting {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -744,31 +775,32 @@ body {
 
 .textUserTesting {
     text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 .textUserTesting h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
+    text-align: center;
 }
 
 .textUserTesting p {
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;
     font-family: var(--fontNormalText);
-}
-
-.userTesting > .textUserTesting {
-    margin-bottom: 0.6rem;
+    color: var(--muted);
+    text-align: center;
 }
 
 .userTesting > .goal,
 .userTesting > .Method,
-.userTesting > .taskDesign {
-    margin-top: 0.8rem;
+.userTesting > .taskDesign,
+.userTesting > .findings {
+    margin-top: 3rem;
 }
 
 .goal,
@@ -791,12 +823,16 @@ body {
 }
 
 .taskDesign {
-    grid-template-columns: minmax(140px, 180px) repeat(4, minmax(0, 1fr));
+    display: grid;
+    grid-template-columns: minmax(140px, 180px) 1fr;
+    column-gap: 1.25rem;
+    row-gap: 0.45rem;
+    align-items: start;
 }
 
 .findings {
     display: grid;
-    grid-template-columns: minmax(140px, 180px) repeat(4, minmax(0, 1fr));
+    grid-template-columns: minmax(140px, 180px) 1fr;
     column-gap: 1.25rem;
     row-gap: 0.45rem;
     align-items: start;
@@ -852,20 +888,18 @@ body {
 }
 
 .taskDesign .taskList {
-    grid-column: span 1;
+    flex: 1 1 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 1rem 1rem;
     margin: 0;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 0.55rem;
     text-align: center;
-    padding: 0.65rem 0.75rem;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: #ffffff;
 }
 
 .taskDesign .taskList:nth-of-type(1) { grid-column: 2; }
@@ -897,16 +931,16 @@ body {
 }
 
 .cardFindings {
+    flex: 1 1 0;
     border: 1px solid var(--line);
     border-radius: 10px;
     background-color: #ffffff;
-    padding: 0.65rem 0.75rem;
+    padding: 2rem 1.5rem;
     margin: 0;
-    grid-column: span 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.55rem;
     text-align: center;
 }
@@ -915,6 +949,21 @@ body {
 .cardFindings:nth-of-type(2) { grid-column: 3; }
 .cardFindings:nth-of-type(3) { grid-column: 4; }
 .cardFindings:nth-of-type(4) { grid-column: 5; }
+
+.taskCards,
+.findingCards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1rem;
+    grid-column: 2;
+}
+
+.taskCards .taskList,
+.findingCards .cardFindings {
+    flex: 1 1 0;
+    min-width: 140px;
+}
 
 .taskDesign .taskList:nth-of-type(1),
 .cardFindings:nth-of-type(1) {
@@ -940,14 +989,18 @@ body {
 .finalPrototype {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 10rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
+.textFinalPrototype {
+    margin-bottom: 2.5rem;
+}
+
 .textFinalPrototype h2 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-size: 2.5rem;
     font-family: var(--fontBig);
     color: var(--textColorGreen);
@@ -955,7 +1008,7 @@ body {
 }
 
 .textFinalPrototype p {
-    margin: 0 auto;
+    margin: 0 auto 0;
     max-width: 760px;
     font-size: 1.5rem;
     line-height: 1.6;

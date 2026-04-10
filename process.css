@@ -221,9 +221,39 @@ body {
     color: var(--textColorGreen);
 }
 
+@media (max-width: 1200px) {
+    .nav-wrap {
+        padding: 0 2.5rem;
+    }
+
+    .introProcess h2 {
+        font-size: 2.5rem;
+    }
+
+    .goals,
+    .research {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem;
+    }
+}
+
 @media (max-width: 980px) {
+    .nav-wrap {
+        padding: 0 1.25rem;
+    }
+
     .introProcess {
+        height: 170vh;
         padding: 0 8%;
+    }
+
+    .introProcess h2 {
+        font-size: 2.1rem;
+    }
+
+    .introFirst,
+    .introThird {
+        gap: 1.25rem;
     }
 
     .imageIntro {
@@ -245,6 +275,61 @@ body {
 
     .introThird .imageIntro {
         height: 250px;
+    }
+
+    .textWho h2,
+    .textGoals h2,
+    .textResearch h2,
+    .textUserJourney h2,
+    .textWireframes-Low h2,
+    .textStyleGuide h2,
+    .textUserTesting h2,
+    .textFinalPrototype h2 {
+        font-size: 2rem;
+    }
+
+    .textWho p,
+    .textGoals p,
+    .textResearch p,
+    .textUserJourney p,
+    .textWireframes-Low p,
+    .textStyleGuide p,
+    .textUserTesting p,
+    .textFinalPrototype p {
+        font-size: 1.15rem;
+    }
+
+    .goal,
+    .Method,
+    .taskDesign,
+    .findings {
+        grid-template-columns: 1fr;
+        row-gap: 0.6rem;
+    }
+
+    .goal > h2,
+    .Method > h2,
+    .taskDesign > h2,
+    .goal p,
+    .Method > p,
+    .taskDesign > p,
+    .findings h2,
+    .findings > p,
+    .taskDesign .taskList,
+    .cardFindings {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .taskDesign .taskList:nth-of-type(1),
+    .taskDesign .taskList:nth-of-type(2),
+    .taskDesign .taskList:nth-of-type(3),
+    .taskDesign .taskList:nth-of-type(4),
+    .cardFindings:nth-of-type(1),
+    .cardFindings:nth-of-type(2),
+    .cardFindings:nth-of-type(3),
+    .cardFindings:nth-of-type(4) {
+        grid-column: 1;
     }
 }
 
@@ -920,8 +1005,25 @@ footer {
 }
 
 @media (max-width: 760px) {
+    .nav-wrap {
+        height: auto;
+        padding: 0.75rem 1rem;
+        align-items: center;
+    }
+
+    .nav-list {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .introProcess {
+        height: 160vh;
         padding: 0 6%;
+    }
+
+    .introProcess h2 {
+        font-size: 1.7rem;
     }
 
     .whoIsThisFor {

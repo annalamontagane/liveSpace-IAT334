@@ -169,14 +169,15 @@ body {
     font-family: var(--fontBig);
     color: white;
     margin-bottom: 1rem;
+    margin: 0 8rem;
 }
-.missionStatement p {
+/* .missionStatement p {
     font-size: 1.25rem;
     max-width: 800px;
     margin: 0 auto;
     font-family: var(--fontNormalText);
     color: white;
-}
+} */
 
 /********************Features Section*****************/
 
@@ -316,10 +317,143 @@ footer {
     font-size: 0.95rem;
 }
 
+@media (max-width: 1600px) {
+    .features {
+        margin: 0 10rem;
+    }
+
+    .featureItem h3 {
+        font-size: 2.2rem;
+    }
+
+    .featureItem p,
+    .featuresHeader p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .nav-wrap {
+        padding: 0 2.25rem;
+    }
+
+    .landing {
+        min-height: 90vh;
+        height: auto;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .textLanding h1 {
+        font-size: 2.5rem;
+        max-width: 760px;
+    }
+
+    .textLanding p {
+        font-size: 1.15rem;
+    }
+
+    .features {
+        margin: 0 6rem;
+        padding: 3.5rem 4%;
+    }
+
+    .featuresHeader h2,
+    .missionStatement h2 {
+        font-size: 2.2rem;
+    }
+
+    .featureItem {
+        gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .featureItem h3 {
+        font-size: 1.9rem;
+    }
+
+    .featureItem p,
+    .featuresHeader p,
+    .missionStatement p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-wrap {
+        padding: 0 1.25rem;
+    }
+
+    .features {
+        margin: 0 2.25rem;
+        padding: 3rem 3%;
+    }
+
+    .featureItem {
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .featureItem h3 {
+        font-size: 1.65rem;
+    }
+
+    .featureItem p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .features {
+        margin: 0 1rem;
+    }
+
+    .featureItem,
+    .featureItem.reverse {
+        flex-direction: column;
+    }
+
+    .featureItem .text,
+    .imageContainer {
+        width: 100%;
+    }
+
+    .imageContainer img {
+        max-width: min(100%, 620px);
+    }
+}
+
 @media (max-width: 760px) {
     .nav-wrap {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+
+    .features {
+        margin: 0;
+        padding: 2.5rem 1rem;
+    }
+
+    .featuresHeader h2,
+    .missionStatement h2 {
+        font-size: 1.9rem;
+    }
+
+    .featuresHeader p,
+    .missionStatement p,
+    .textLanding p {
+        font-size: 1.05rem;
+    }
+
+    .textLanding h1 {
+        font-size: 2rem;
     }
 
     .grid-3 {
